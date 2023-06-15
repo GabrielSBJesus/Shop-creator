@@ -36,6 +36,20 @@ public class Shop {
 	public void setListaProdutos(ListProducts listaProdutos) {
 		this.listaProdutos = listaProdutos;
 	}
+	
+	public void showItens() {
+		try {
+			for(int i = 0; i < thsi.listaProdutos.length; i++) {
+				if(listaProdutos[i] = "") {
+					throw new Exception("Um index da sua lista está sem nenhum valor ou com valor nulo");
+				}
+				System.out.println(listaProdutos[i]);
+			}
+		} catch (Exception e)  {
+			System.out.println(e);
+		}
+
+	}
 
 	@Override
 	public String toString() {
