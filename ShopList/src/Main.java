@@ -6,15 +6,21 @@ import java.util.ArrayList;
 public class Main {
 	public static void main(String[] args) {
 		
-		LocalDateTime date = LocalDateTime.of(2021, 5, 15, 10, 30, 0);
+		LocalDateTime dateTomate = LocalDateTime.of(2021, 7, 15, 23, 30, 0);
 	    DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-	    String newDate = date.format(dateFormat);
+	    String newDateTomate = dateTomate.format(dateFormat);
 	    
-		Produto tomate = new Produto("Tomate", 10.0, newDate , 1);
-		Produto banana = new Produto("banana", 20.0, newDate , 2);
-		Produto cereja = new Produto("cereja", 2.0, newDate , 3);
+		LocalDateTime dateBanana = LocalDateTime.of(2021, 5, 30, 5, 30, 0);
+	    String newDateBanana = dateBanana.format(dateFormat);
+	    
+		LocalDateTime dateCereja = LocalDateTime.of(2021, 8, 18, 12, 30, 0);
+	    String newDateCereja = dateCereja.format(dateFormat);
+	    
+		Product tomate = new Product("Tomate", 10.0, newDateTomate , 1);
+		Product banana = new Product("banana", 20.0, newDateBanana , 2);
+		Product cereja = new Product("cereja", 2.0, newDateCereja , 3);
 		
-		List<Produto> listOfFruits = new ArrayList<Produto>();
+		List<Product> listOfFruits = new ArrayList<Product>();
 		
 		ListProducts listOfProducts = new ListProducts("Frutas");
 		listOfProducts.setListOfProducts(listOfFruits);

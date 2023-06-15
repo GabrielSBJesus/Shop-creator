@@ -2,7 +2,7 @@ import java.util.List;
 
 public class ListProducts {
 	private String typeOfList; 
-	private List<Produto> listOfProducts;
+	private List<Product> listOfProducts;
 	
 	public ListProducts(String typeOfList) {
 		this.typeOfList = typeOfList;
@@ -16,15 +16,15 @@ public class ListProducts {
 		this.typeOfList = typeOfList;
 	}
 
-	public List<Produto> getListOfProducts() {
+	public List<Product> getListOfProducts() {
 		return listOfProducts;
 	}
 
-	public void setListOfProducts(List<Produto> listOfProducts) {
+	public void setListOfProducts(List<Product> listOfProducts) {
 		this.listOfProducts = listOfProducts;
 	}
 	
-	public void addProductrAtList(Produto product) {
+	public void addProductrAtList(Product product) {
 		this.listOfProducts.add(product);
 	}
 
