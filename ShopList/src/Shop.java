@@ -1,11 +1,13 @@
+import java.util.List;
+
 public class Shop {
 	private String boss;
 	private String nameStore;
 	private Integer id;
 	private double priceStore;
-	private ListProducts listaProdutos;
+	private List<Product> listaProdutos;
 	
-	Shop(String boss, String nameStore, Integer id, Double priceStore, ListProducts listaProdutos) {
+	Shop(String boss, String nameStore, Integer id, Double priceStore, List<Product> listaProdutos) {
 		this.boss = boss;
 		this.nameStore = nameStore;
 		this.id = id;
@@ -29,21 +31,21 @@ public class Shop {
 		this.priceStore = priceStore;
 	}
 	
-	public ListProducts getListaProdutos() {
+	public List<Product> getListaProdutos() {
 		return listaProdutos;
 	}
 
-	public void setListaProdutos(ListProducts listaProdutos) {
+	public void setListaProdutos(List<Product> listaProdutos) {
 		this.listaProdutos = listaProdutos;
 	}
 	
 	public void showItens() {
 		try {
-			for(int i = 0; i < thsi.listaProdutos.length; i++) {
-				if(listaProdutos[i] = "") {
+			for(int i = 0; i < this.listaProdutos.size(); i++) {
+				if(listaProdutos.get(i) == null) {
 					throw new Exception("Um index da sua lista está sem nenhum valor ou com valor nulo");
 				}
-				System.out.println(listaProdutos[i]);
+				System.out.println(listaProdutos.get(i));
 			}
 		} catch (Exception e)  {
 			System.out.println(e);
