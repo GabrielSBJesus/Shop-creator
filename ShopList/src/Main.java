@@ -26,7 +26,7 @@ public class Main {
 			
 			int quantidadeItens = sc.nextInt();
 			
-			List<Product> subListOfFruits = new ArrayList<Product>();
+			List<Product> subList = new ArrayList<Product>();
 			
 			for(int i = 0; i < quantidadeItens; i++) {
 				System.out.println("Qual o nome do seu produto ?");
@@ -56,13 +56,16 @@ public class Main {
 				Product Item = new Product(nomeProduto, 2.0, newDateItem , 3);
 				
 				
-				subListOfFruits.add(Item);
-				
-				System.out.println("Sua Loja já tem alguns itens.");
+				subList.add(Item);
+			
 			}
 			
+			System.out.println("Sua Loja já tem alguns itens.");
+			System.out.println(".");
+			System.out.println(".");
+			System.out.println(".");
 			System.out.println("Muito obrigado por usar nosso programa, agora você tem uma loja só sua.");
-			Shop shop = new Shop(boss, nameStore, 1, 10000.10, subListOfFruits);
+			Shop shop = new Shop(boss, nameStore, 1, 10000.10, subList);
 			System.out.println("Sua Loja:");
 			System.out.println(shop);
 
